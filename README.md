@@ -18,6 +18,25 @@ Traditional blockchains secure financial transactions. **neural_blockchain** is 
 * **Algorithmic Auditing:** Built-in chain validation to detect ledger tampering instantly.
 * **Pure Python Foundation:** Built entirely from scratch without bloated external blockchain frameworks to ensure maximum execution control.
 
+## 📖 System Overview
+
+In distributed machine learning (Federated Learning), multiple remote nodes train an AI model collaboratively. This blockchain acts as the central truth mechanism, cryptographically chaining model weight updates to create a tamper-proof, verifiable audit trail.
+
+## 🛠️ Tech Stack
+This infrastructure is built to be lightweight, auditable, and easily deployable.
+* **Core Logic:** Pure Python 3.10+ (Object-Oriented Design)
+* **Cryptography:** Native Python `hashlib` (SHA-256)
+* **API / Network Layer:** FastAPI (Chosen for high-performance async routing and automatic Swagger UI documentation)
+* **Server:** Uvicorn (ASGI web server)
+
+## 📂 Project Structure
+```text
+neural_blockchain/
+├── blockchain.py     # Core data structures, hashing, and Proof-of-Work logic
+├── main.py           # FastAPI routing, P2P network endpoints, and node server
+├── requirements.txt  # Project dependencies
+└── README.md         # System documentation
+
 ## 🚀 Quick Start (Core Engine)
 
 Run the local validation engine to test the cryptographic linked-list structure and simulate a tampering attack.
