@@ -32,10 +32,20 @@ This infrastructure is built to be lightweight, auditable, and easily deployable
 ## 📂 Project Structure
 ```text
 neural_blockchain/
-├── blockchain.py     # Core data structures, hashing, and Proof-of-Work logic
-├── main.py           # FastAPI routing, P2P network endpoints, and node server
-├── requirements.txt  # Project dependencies
-└── README.md         # System documentation
+├── core/                   # The foundational blockchain engine
+│   ├── __init__.py
+│   ├── block.py            # SHA-256 cryptographic hashing and block structure
+│   ├── ledger.py           # Chain state management and validation logic
+│   └── consensus.py        # Proof-of-Work (PoW) and longest-chain algorithms
+├── api/                    # The REST API and P2P communication layer
+│   ├── __init__.py
+│   ├── routes.py           # FastAPI endpoints (/mine, /chain, /nodes/sync)
+│   └── schemas.py          # Pydantic models for strict JSON payload validation
+├── tests/                  # Integrity and unit testing
+│   └── test_crypto.py      # Automated tests for hash functions and tampering
+├── main.py                 # ASGI application entry point (Uvicorn)
+├── requirements.txt        # Production dependencies
+└── README.md               # System documentation
 
 ## 🚀 Quick Start (Core Engine)
 
