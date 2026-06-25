@@ -27,16 +27,5 @@ git clone [https://github.com/your-username/neural_blockchain.git](https://githu
 cd neural_blockchain
 python blockchain.py
 
-## 🗺️ Engineering Roadmap
 
-- [x] **Phase 1:** Core Data Structures & SHA-256 Cryptography
-- [ ] **Phase 2:** Proof-of-Work (PoW) Consensus Mechanism
-- [ ] **Phase 3:** Peer-to-Peer Node Decentralization via REST API
-- [ ] **Phase 4:** Production Deployment & Live Network Sync
-- [ ] **Phase 5:** Interactive Network Explorer 
 
-<br>
-
-<div align="center">
-  <i>Architected for the future of decentralized AI.</i>
-</div>
