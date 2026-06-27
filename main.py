@@ -1,20 +1,18 @@
-from core.ledger import Blockchain
-from core.block import Block
+from fastapi import FastAPI
+from api.routes import router
 
-# ==========================================
-# SYSTEM TEST: WATCH THE MINING IN ACTION
-# ==========================================
+# Initialize the web server
+app = FastAPI(
+    title="Neural Blockchain Node",
+    description="Decentralized infrastructure for Federated Learning.",
+    version="1.0.0"
+)
+
+# Connect our modular routing engine (brings in /mine, /chain, /nodes)
+app.include_router(router)
+
 if __name__ == "__main__":
-    print("🧠 Booting Neural Ledger Core...\n")
-    ai_ledger = Blockchain()
-
-    print("⛏️  Mining Block 1 (Processing Node A's AI weights)...")
-    # You will notice a slight delay here as your CPU grinds through the math!
-    ai_ledger.add_block(Block(1, {"node": "Node_A", "accuracy": 0.85}, ""))
-
-    print("\n⛏️  Mining Block 2 (Processing Node B's AI weights)...")
-    ai_ledger.add_block(Block(2, {"node": "Node_B", "accuracy": 0.89}, ""))
-
-    print("\n--- Network Consensus Status ---")
-    print(f"Total Blocks Secured: {len(ai_ledger.chain)}")
-    print(f"Cryptographic Integrity Valid: {ai_ledger.is_chain_valid()}")
+    import uvicorn
+    print("🧠 Booting Neural Ledger API Node...")
+    # Runs the server on port 8000
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
